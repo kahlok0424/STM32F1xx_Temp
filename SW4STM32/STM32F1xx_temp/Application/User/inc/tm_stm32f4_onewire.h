@@ -286,6 +286,8 @@ void TM_OneWire_SelectWithPointer(TM_OneWire_t* OneWireStruct, uint8_t* ROM);
  */
 uint8_t TM_OneWire_CRC8(uint8_t* addr, uint8_t len);
 
+void TM_OneWire_TargetSetup(TM_OneWire_t* OneWireStruct, uint8_t family_code);
+
 /**
  * @}
  */

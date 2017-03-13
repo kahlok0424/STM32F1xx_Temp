@@ -95,7 +95,7 @@ int main(void)
 
 
   /* USER CODE BEGIN WHILE */
-  char buf[40];
+Zchar buf[40];
     uint8_t devices, i, j, count, device[1][8];
     uint8_t alarm_count;
   	uint8_t alarm_device[1][8];
@@ -135,15 +135,20 @@ int main(void)
       TM_GPIO_TogglePinValue(GPIOC, GPIO_Pin_13);
       TM_GPIO_TogglePinValue(GPIOC, GPIO_Pin_13);
 
-      //for testing
-    /*  TM_GPIO_Init(GPIOB, 									\
-               		  	   GPIO_Pin_3,											\
+
+      TM_GPIO_Init(GPIOB, 									\
+               		  	  GPIO_Pin_3,											\
            				   TM_GPIO_Mode_IN,									\
            				   TM_GPIO_OType_PP,									\
            				   TM_GPIO_PuPd_NOPULL, 								\
            				   TM_GPIO_Speed_Medium);
+
+      	  TM_GPIO_TogglePinValue(GPIOC, GPIO_Pin_13);
            check = TM_GPIO_GetInputPinValue(GPIOB, GPIO_Pin_3);
-*/
+           TM_GPIO_SetPinAsOutput(	GPIOB	,	GPIO_Pin_3);
+           TM_GPIO_SetPinHigh(	GPIOB	,	GPIO_Pin_3);
+
+
 
       // for testing
    /*   while(1)
