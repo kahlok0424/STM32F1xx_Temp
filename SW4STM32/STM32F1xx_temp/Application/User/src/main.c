@@ -95,7 +95,7 @@ int main(void)
 
 
   /* USER CODE BEGIN WHILE */
-Zchar buf[40];
+    char buf[40];
     uint8_t devices, i, j, count, device[1][8];
     uint8_t alarm_count;
   	uint8_t alarm_device[1][8];
