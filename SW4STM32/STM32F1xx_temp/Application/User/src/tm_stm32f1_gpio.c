@@ -310,9 +310,8 @@ void TM_GPIO_INT_Init(GPIO_TypeDef* GPIOx,                                  \
 	uint8_t ptr = TM_GPIO_GetPortSource(GPIOx);
 
 	/* Go through all pins */
-	for (pinpos = 0; pinpos < 0x10; pinpos++) {
-    
-    PinState *state = &pinStates[ptr];
+	for (pinpos = 0; pinpos < 0x10; pinpos++) {    
+    PinState *state = &pinStates[ptr][pinpos];
     state->mode = TM_GPIO_Mode_IN;
     state->pullType = TM_GPIO_PuPd_NOPULL;    
     
